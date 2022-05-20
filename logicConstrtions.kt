@@ -212,7 +212,8 @@ fun timeCalculator (seconds: Int) {
 
         }
     }
-    fun currencyConverter(rub: Int) {
+}
+    fun currencyConverter (rub: Int) {
 //    println("Введите колчество рублей")
 //    val rub = readLine()!!.toInt()
 
@@ -287,4 +288,4 @@ fun timeCalculator (seconds: Int) {
         println()
 
     }
-}
+

@@ -3,6 +3,7 @@ package MyProjectForGithub
 import  MyProjectForGithub.*
 import kotlin.system.exitProcess
 
+
 fun main() {
     var start : Int
     //try {
@@ -448,12 +449,12 @@ fun mainProgramm () {
             } else if (choice2 == 8) {
                 try {
                     println("Введите колчество рублей для конвертации: ")
-                    HomeWork.currencyConverter(readLine()!!.toInt())
+                    MyProjectForGithub.currencyConverter(readLine()!!.toInt())
                 }
                 catch (e: NumberFormatException) {
                     println("The input data must be number, not string! ")
                     println("Аккуратно введите колчество рублей для конвертации! Иначе программа закончит свою работу!")
-                    HomeWork.currencyConverter(readLine()!!.toInt())
+                    MyProjectForGithub.currencyConverter(readLine()!!.toInt())
                 }
             }
             else if (choice2 == 0) {
