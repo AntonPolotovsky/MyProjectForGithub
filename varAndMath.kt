@@ -73,8 +73,15 @@ fun main() {
 
     fun operationsWithVariables(x: Int, y: Int, z: Int, c: Int) {
         var xX = x
-        println("Сумма x и y: ${x + y}")
-        println("Разность x и y: ${x - y}")
+        fun sum () = x+y
+        println("Сумма x и y равна: ${sum()}")
+      //  println("Сумма x и y: ${x + y}")
+       // println("Разность x и y: ${x - y}")
+      fun diff () : Int{
+          return x-y
+      }
+        println("Разность x и y: ${diff()}")
+
         println("Отношение x к y: ${x / y}")
         println("Произведение x и y: ${x * y}")
         println("Остаток от деления x и y: ${x % y}")

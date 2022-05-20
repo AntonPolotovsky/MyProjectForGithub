@@ -1,4 +1,5 @@
 package MyProjectForGithub
+
 import java.util.*
 import java.util.Collections.max
 import kotlin.math.max
@@ -12,12 +13,15 @@ fun main() {
 }
     // Задача 1
 fun lessFive () { //1
-        val numbers = arrayOf(1, 1, 2, 3, 4, 5, 8, 13, 21, 34, 55, 89)
-        for (t in numbers) {
-            if (t <= 5) {
-                println(t)
-            }
+        lessFiveVarArg(*intArrayOf(1, 1, 2, 3, 4, 5, 8, 13, 21, 34, 55, 89))
+    }
+fun lessFiveVarArg (vararg numbers :Int) {
+//val numbers = arrayOf(1, 1, 2, 3, 4, 5, 8, 13, 21, 34, 55, 89)
+    for (t in numbers) {
+        if (t <= 5) {
+            println(t)
         }
+    }
     }
 
     //Задача 2
@@ -36,12 +40,15 @@ fun commonElements () { //2
 
     //Задача 3
 fun sort () { //3
-        val numbers = arrayOf(1, 10, 15, 2, 3, 4, 7, 5, 8, 13, 21, 152, 34, 55, 89)
+        sortNum (1, 10, 15, 2, 3, 4, 7, 5, 8, 13, 21, 152, 34, 55, 89)
+    }
+fun sortNum (vararg numbers :Int) {
+    // val numbers = arrayOf(1, 10, 15, 2, 3, 4, 7, 5, 8, 13, 21, 152, 34, 55, 89)
 
-        numbers.sort()
-        println("Sorted array: ${numbers.contentToString()}")
-        numbers.sortDescending()
-        println("Sorted array: ${numbers.contentToString()}")
+    numbers.sort()
+    println("Sorted array: ${numbers.contentToString()}")
+    numbers.sortDescending()
+    println("Sorted array: ${numbers.contentToString()}")
     }
 
     //Задача 4
@@ -208,10 +215,15 @@ fun evenNumbers () { //11
 
     //Задача 16
     fun listOfElements () { //13
-        val numbers = arrayOf(1, 2, 3, 4, 5)
-
-        for (number in numbers) print("$number ")
+        varArgFunction(1, 2, 3, 4, 5, 6, 7)
     }
+fun varArgFunction (vararg numbers: Int) {
+//val numbers = arrayOf(1, 2, 3, 4, 5)
+
+    for (number in numbers)
+        print("$number ")
+
+}
 
     //Задача 17
   fun numbersSum () { //14
@@ -290,19 +302,21 @@ fun evenNumbers () { //11
 
     //Задача 22
     fun longAndOften () { //19
-        val text = "good morning good my name is Anton Anton Anton"
+        textNew("good", "morning", "good", "my", "name", "is", "Anton", "Anton", "Anton")
+    }
+fun textNew(vararg text: String) {
 
-        var maxLetterWord = ""
-        var wordWord = ""
-        val words = text.split(" ")
-        for (word in words) {
-            var count = 1
-            var count2 = 1
-            var maxCount = 0
-            var maxWord = ""
-            var wWord = ""
-            //println(word.count()) //количество букв в слове
-            for (otherWord in words) {
+    var maxLetterWord = ""
+    var wordWord = ""
+    val words = text
+    for (word in text) {
+        var count = 1
+        var count2 = 1
+        var maxCount = 0
+        var maxWord = ""
+        var wWord = ""
+        //println(word.count()) //количество букв в слове
+        for (otherWord in words) {
                 if (word.count() > otherWord.count()) {
                     count++
                     maxLetterWord = word
